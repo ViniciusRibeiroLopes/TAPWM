@@ -1,93 +1,46 @@
 const icons = {
-    'pedra': 'fa-solid fa-hand-back-fist',
-    'papel': 'fa-solid fa-hand',
-    'tesoura': 'fa-solid fa-hand-scissors',
-    'question': 'fa-solid fa-question'
+  pedra: "fa-solid fa-hand-back-fist",
+  papel: "fa-solid fa-hand",
+  tesoura: "fa-solid fa-hand-scissors",
 };
 
-const choiceBtns = document.querySelectorAll('.choice-btn');
-const battleDisplay = document.getElementById('battleDisplay');
-const playerIcon = document.getElementById('playerIcon');
-const computerIcon = document.getElementById('computerIcon');
-const outcomeText = document.getElementById('outcomeText');
+let playerScore = 0,
+  computerScore = 0,
+  drawScore = 0;
 
-let scores = { player: 0, computer: 0, draw: 0 };
-let isPlaying = false;
+// Fase 1: Escutador de clique nas escolhas
+document.querySelectorAll(".choice-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const player = btn.dataset.choice;
 
-choiceBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        if(isPlaying) return;
-        playGame(btn.dataset.choice);
-    });
-});
+    // Fase 2: Escolha do Computador (Math.random)
+    const rnd = Math.random();
+    const computer = rnd < 0.33 ? "pedra" : rnd < 0.66 ? "papel" : "tesoura";
 
-function getComputerChoice() {
-    const randomValue = Math.random();
-    
-    if (randomValue < 1/3) {
-        return 'pedra';
-    } else if (randomValue < 2/3) {
-        return 'papel';
+    // Exibe as escolhas no HTML
+    document.getElementById("playerIcon").className = icons[player];
+    document.getElementById("computerIcon").className = icons[computer];
+    document.getElementById("battleDisplay").classList.add("show");
+
+    const outcomeText = document.getElementById("outcomeText");
+
+    // Fase 3: Determina vencedor e pontuação
+    if (player === computer) {
+      outcomeText.textContent = "Empate!";
+      outcomeText.className = "outcome-text show draw";
+      document.getElementById("drawScore").textContent = ++drawScore;
+    } else if (
+      (player === "pedra" && computer === "tesoura") ||
+      (player === "papel" && computer === "pedra") ||
+      (player === "tesoura" && computer === "papel")
+    ) {
+      outcomeText.textContent = "Você Venceu!";
+      outcomeText.className = "outcome-text show win";
+      document.getElementById("playerScore").textContent = ++playerScore;
     } else {
-        return 'tesoura';
+      outcomeText.textContent = "Você Perdeu!";
+      outcomeText.className = "outcome-text show lose";
+      document.getElementById("computerScore").textContent = ++computerScore;
     }
-}
-
-function determineWinner(player, computer) {
-    if (player === computer) return 'draw';
-    
-    const winConditions = {
-        'pedra': 'tesoura',
-        'papel': 'pedra',
-        'tesoura': 'papel'
-    };
-
-    return winConditions[player] === computer ? 'player' : 'computer';
-}
-
-function playGame(playerChoice) {
-    isPlaying = true;
-    
-    battleDisplay.classList.add('show');
-    battleDisplay.classList.add('animating');
-    outcomeText.classList.remove('show');
-    outcomeText.className = 'outcome-text';
-    
-    playerIcon.className = icons['pedra'];
-    computerIcon.className = icons['pedra'];
-    outcomeText.textContent = "Preparando...";
-    outcomeText.classList.add('show');
-
-    setTimeout(() => {
-        battleDisplay.classList.remove('animating');
-        
-        const computerChoice = getComputerChoice();
-        const result = determineWinner(playerChoice, computerChoice);
-        
-        playerIcon.className = icons[playerChoice];
-        computerIcon.className = icons[computerChoice];
-        
-        if (result === 'player') {
-            outcomeText.textContent = "Você Venceu!";
-            outcomeText.classList.add('win');
-            scores.player++;
-            document.getElementById('playerScore').textContent = scores.player;
-        } else if (result === 'computer') {
-            outcomeText.textContent = "Você Perdeu!";
-            outcomeText.classList.add('lose');
-            scores.computer++;
-            document.getElementById('computerScore').textContent = scores.computer;
-        } else {
-            outcomeText.textContent = "Empate!";
-            outcomeText.classList.add('draw');
-            scores.draw++;
-            document.getElementById('drawScore').textContent = scores.draw;
-        }
-        
-        outcomeText.classList.remove('show');
-        void outcomeText.offsetWidth; 
-        outcomeText.classList.add('show');
-
-        isPlaying = false;
-    }, 1000);
-}
+  });
+});
