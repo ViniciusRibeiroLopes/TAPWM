@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, Papel ou Tesoura</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Pedra, Papel, Tesoura</h1>
+        <p class="subtitle">Faça sua escolha e desafie o computador!</p>
+
+        <div class="choices">
+            <button class="choice-btn" data-choice="pedra" title="Pedra">
+                <i class="fa-solid fa-hand-back-fist"></i>
+                <span style="user-select: none;">Pedra</span>
+            </button>
+            <button class="choice-btn" data-choice="papel" title="Papel">
+                <i class="fa-solid fa-hand"></i>
+                <span style="user-select: none;">Papel</span>
+            </button>
+            <button class="choice-btn" data-choice="tesoura" title="Tesoura">
+                <i class="fa-solid fa-hand-scissors"></i>
+                <span style="user-select: none;">Tesoura</span>
+            </button>
+        </div>
+
+        <div class="result-area">
+            <div class="battle-display" id="battleDisplay">
+                <div class="player-choice">
+                    <i class="fa-solid fa-question" id="playerIcon"></i>
+                    <span class="choice-label">Você</span>
+                </div>
+                <div class="vs">VS</div>
+                <div class="computer-choice">
+                    <i class="fa-solid fa-question" id="computerIcon"></i>
+                    <span class="choice-label">Computador</span>
+                </div>
+            </div>
+            <div class="outcome-text" id="outcomeText">Faça sua jogada!</div>
+        </div>
+
+        <div class="score-board">
+            <div class="score-item">
+                <div class="score-label">Você</div>
+                <div class="score-value" id="playerScore">0</div>
+            </div>
+            <div class="score-item">
+                <div class="score-label">Empates</div>
+                <div class="score-value" id="drawScore">0</div>
+            </div>
+            <div class="score-item">
+                <div class="score-label">Computador</div>
+                <div class="score-value" id="computerScore">0</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
