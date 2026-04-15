@@ -1,0 +1,332 @@
+:root {
+  --bg: #ffffff;
+  --bg-cartao: transparent;
+  --texto: #111111;
+  --texto-mutado: #666666;
+  --primaria: #000000;
+  --secundaria: #f4f4f4;
+  --borda-sutil: #e5e5e5;
+  --borda-foco: #000000;
+
+  --espaco-sm: 0.75rem;
+  --espaco-md: 1.25rem;
+  --espaco-lg: 2.25rem;
+
+  --fonte-sm: 0.75rem;
+  --fonte-md: 1rem;
+  --fonte-lg: 1.2rem;
+  --fonte-xl: 2.3rem;
+}
+
+[data-theme="dark"] {
+  --bg: #09090b;
+  --bg-cartao: transparent;
+  --texto: #fafafa;
+  --texto-mutado: #a1a1aa;
+  --primaria: #ffffff;
+  --secundaria: #27272a;
+  --borda-sutil: #27272a;
+  --borda-foco: #fafafa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--texto);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: var(--espaco-md);
+  line-height: 1.5;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-lg);
+  padding-top: var(--espaco-lg);
+}
+
+header {
+  border-bottom: 1px solid var(--borda-sutil);
+  padding-bottom: var(--espaco-md);
+  margin-bottom: var(--espaco-md);
+}
+
+.cabecalho-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: var(--fonte-xl);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.03em;
+  color: var(--primaria);
+}
+
+.btn-tema {
+  background: transparent;
+  border: 1px solid var(--borda-sutil);
+  color: var(--texto-mutado);
+  padding: 0.4rem 0.8rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-tema:hover {
+  border-color: var(--primaria);
+  color: var(--texto);
+}
+
+header p {
+  color: var(--texto-mutado);
+  font-size: var(--fonte-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Progresso minimalista */
+.barra-progresso {
+  background: var(--secundaria);
+  height: 1px;
+  width: 100%;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.progresso {
+  height: 1px;
+  background: var(--primaria);
+  width: 0%;
+  transition: width 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Layout Principal */
+.grid-principal {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espaco-lg);
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .grid-principal {
+    grid-template-columns: 320px 1fr;
+  }
+}
+
+/* Cartões */
+.cartao {
+  background: var(--bg-cartao);
+  border: 1px solid var(--borda-sutil);
+  padding: var(--espaco-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-md);
+  border-radius: 0;
+  height: 100%;
+}
+
+.cartao h2 {
+  font-size: var(--fonte-md);
+  font-weight: 400;
+  border-bottom: 1px solid var(--borda-sutil);
+  padding-bottom: var(--espaco-md);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--texto-mutado);
+}
+
+/* Formulário super limpo */
+.grupo-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.grupo-campo label {
+  color: var(--texto-mutado);
+  font-size: var(--fonte-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.grupo-campo input, 
+.grupo-campo select {
+  width: 100%;
+  padding: 0.8rem 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--borda-sutil);
+  color: var(--texto);
+  font-size: var(--fonte-md);
+  transition: border-color 0.2s ease;
+  border-radius: 0;
+}
+
+.grupo-campo select {
+    appearance: none;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, transparent 50%, var(--texto-mutado) 50%),
+                      linear-gradient(135deg, var(--texto-mutado) 50%, transparent 50%);
+    background-position: calc(100% - 13px) calc(1em + 5px), calc(100% - 8px) calc(1em + 5px);
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+}
+
+.grupo-campo select option {
+  background: var(--bg);
+  color: var(--texto);
+}
+
+.grupo-campo input:focus, 
+.grupo-campo select:focus {
+  outline: none;
+  border-bottom-color: var(--primaria);
+}
+
+/* Botões */
+.botoes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-sm);
+  margin-top: var(--espaco-md);
+}
+
+.btn {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--primaria);
+  background: transparent;
+  color: var(--texto);
+  cursor: pointer;
+  font-weight: 400;
+  font-size: var(--fonte-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+  border-radius: 0;
+}
+
+.btn-primario {
+  background: var(--primaria);
+  color: var(--bg);
+}
+
+.btn-primario:hover {
+  background: transparent;
+  color: var(--texto);
+}
+
+.btn-secundario {
+  background: transparent;
+  color: var(--texto-mutado);
+  border-color: var(--borda-sutil);
+}
+
+.btn-secundario:hover {
+  border-color: var(--primaria);
+  color: var(--texto);
+}
+
+/* Estatísticas */
+.grid-estatisticas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--espaco-md);
+}
+
+@media (min-width: 768px) {
+  .grid-estatisticas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.estatistica {
+  padding: var(--espaco-md);
+  border: 1px solid var(--borda-sutil);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.estatistica span {
+  color: var(--texto-mutado);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.estatistica strong {
+  font-size: var(--fonte-lg);
+  font-weight: 300;
+  color: var(--texto);
+}
+
+/* Destaques da grade final */
+.destaque {
+  grid-column: 1 / -1;
+}
+
+.destaque div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.destaque strong {
+  font-size: var(--fonte-md);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: var(--texto);
+}
+
+/* Estados e Mensagem de Conclusão */
+.oculto {
+  display: none !important;
+}
+
+.msg-conclusao {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: var(--espaco-md);
+  padding: var(--espaco-lg) 0;
+}
+
+.msg-conclusao h3 { 
+  font-family: "Playfair Display", serif;
+  font-size: var(--fonte-xl);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--primaria);
+  margin-bottom: var(--espaco-sm);
+}
+
+.msg-conclusao .btn {
+  width: 100%;
+}

@@ -21,6 +21,12 @@ O repositório armazena exemplos práticos, exercícios e projetos desenvolvidos
 - **Descrição:** Desenvolvimento prático de uma aplicação desktop utilizando a interface gráfica do Windows Forms.
 - **Tecnologia:** C# / .NET
 
+### 3️⃣ Atividade 5 - Pesquisa de Opinião
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
+- **Pasta:** `/Atividade5`
+- **Descrição:** Aplicação web responsiva estilo *minimalista* que recebe respostas sobre a opinião de um filme e realiza tabulação lógica exibindo as estatísticas geradas no fechamento dos dados em tempo real. Possui suporte a modos Claro/Escuro.
+- **Tecnologias:** HTML, CSS Vanilla e ES6
+
 ---
 
 ## 🚀 Como executar os projetos
@@ -28,6 +34,7 @@ O repositório armazena exemplos práticos, exercícios e projetos desenvolvidos
 ### Pré-requisitos
 - Para os projetos em **Java**: Possuir o [JDK (Java Development Kit)](https://www.oracle.com/java/technologies/downloads/) instalado e configurado, ou utilizar uma IDE como Eclipse/IntelliJ/VS Code.
 - Para os projetos em **C#**: Possuir o [Visual Studio](https://visualstudio.microsoft.com/) instalado com o pacote ("workload") de *Desenvolvimento para Desktop com .NET*.
+- Para os projetos **Web (Atividade 5)**: Apenas um navegador de internet (Chrome, Edge, Safari, Firefox).
 
 ### Passos
 1. Faça o clone do repositório em sua máquina local:
@@ -40,6 +47,9 @@ O repositório armazena exemplos práticos, exercícios e projetos desenvolvidos
 3. **Para a Atividade 2 (C#)**:
    - Navegue até a pasta `Atividade2/WindowsFormsApp1`.
    - Abra o arquivo da solução (ou o projeto diretamente) no Visual Studio e clique em *Iniciar* (ou pressione `F5`).
+4. **Para a Atividade 5 (Web)**:
+   - Estando na raiz do repositório, navegue para a pasta `Atividade5`.
+   - Basta abrir o arquivo secundário `index.html` em seu navegador para rodar a aplicação imediatamente.
 
 ---
 

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Opinião - Filme</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="cabecalho-topo">
+                <h1>Pesquisa de Opinião</h1>
+                <button class="btn-tema" id="btn-tema">Modo Escuro</button>
+            </div>
+            <p>Respostas: <span id="contador">0</span> / 45</p>
+            <div class="barra-progresso">
+                <div class="progresso" id="progresso"></div>
+            </div>
+        </header>
+
+        <main class="grid-principal">
+            <section class="cartao">
+                <div id="container-form">
+                    <h2>Nova Resposta</h2>
+                    <form id="form-pesquisa">
+                        <div class="grupo-campo">
+                            <label>Idade</label>
+                            <input type="number" id="idade" min="1" max="120" required>
+                        </div>
+                        
+                        <div class="grupo-campo">
+                            <label>Sexo</label>
+                            <select id="sexo" required>
+                                <option value="">Selecione...</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                        
+                        <div class="grupo-campo">
+                            <label>Opinião</label>
+                            <select id="opiniao" required>
+                                <option value="">Selecione...</option>
+                                <option value="4">Ótimo (4)</option>
+                                <option value="3">Bom (3)</option>
+                                <option value="2">Regular (2)</option>
+                                <option value="1">Péssimo (1)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="botoes">
+                            <button type="submit" class="btn btn-primario">Salvar</button>
+                            <button type="button" class="btn btn-secundario" id="btn-simular">Simular 45</button>
+                        </div>
+                    </form>
+                </div>
+                <div id="msg-conclusao" class="oculto msg-conclusao">
+                    <h3>Concluído</h3>
+                    <p style="text-transform: uppercase; font-size: 0.7rem; color: var(--texto-mutado); letter-spacing: 0.05em;">Pesquisa Finalizada</p>
+                    <button class="btn btn-primario" id="btn-reiniciar" style="margin-top: 1rem;">Nova Pesquisa</button>
+                </div>
+            </section>
+
+            <section class="cartao">
+                <h2>Resultados</h2>
+                <div class="grid-estatisticas">
+                    <div class="estatistica">
+                        <span>Média de Idade</span>
+                        <strong id="res-media-idade">--</strong>
+                    </div>
+                    <div class="estatistica">
+                        <span>Mais Velho</span>
+                        <strong id="res-maior-idade">--</strong>
+                    </div>
+                    <div class="estatistica">
+                        <span>Mais Novo</span>
+                        <strong id="res-menor-idade">--</strong>
+                    </div>
+                    <div class="estatistica">
+                        <span>Votos "Péssimo"</span>
+                        <strong id="res-qtd-pessimo">--</strong>
+                    </div>
+                    <div class="estatistica">
+                        <span>Ótimo/Bom (%)</span>
+                        <strong id="res-pct-otimo-bom">--</strong>
+                    </div>
+                    <div class="estatistica destaque">
+                        <div>
+                            <span>Por Sexo</span>
+                            <strong>M: <span id="res-qtd-m">0</span> | F: <span id="res-qtd-f">0</span> | O: <span id="res-qtd-o">0</span></strong>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
