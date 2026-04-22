@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    line-height: 1.5;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #666666;
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #999999;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    background: transparent;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-bottom-color: #1a1a1a;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.btn {
+    width: 100%;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    padding: 1rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #333333;
+}
+
+.resultado {
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+    font-size: 1rem;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.resultado.hidden {
+    display: none;
+}
+
+.resultado.success {
+    color: #1a1a1a;
+}
+
+.resultado.error {
+    color: #888888;
+}
