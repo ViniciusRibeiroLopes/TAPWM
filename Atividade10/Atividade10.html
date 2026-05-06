@@ -110,6 +110,15 @@
         setRa(ra){
             this.ra = ra;
         }
+        setNumLab(numLab){
+            this.numLab = numLab;
+        }
+        getNome(){
+            return this.nome;
+        }
+        getRa(){
+            return this.ra;
+        }
     }
     var objAluno = new Aluno1();
     objAluno.setNome('Daniel');
@@ -157,10 +166,10 @@
         }
 
         setCpf(value){
-            this.cpf = value;
+            this.#cpf = value;
         }
         getCpf(){
-            return this.cpf;
+            return this.#cpf;
         }
 
         getSaldo(){
