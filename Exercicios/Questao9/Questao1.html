@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 1 - Soma de 2 Números</title>
+</head>
+<body>
+    <h1>Questão 1 - Soma de 2 Números (diferentes tipos de função)</h1>
+</body>
+
+<script>
+    // Tipo 1: Função Declarada (Function Declaration)
+    function somaDeclarada(a, b) {
+        return a + b;
+    }
+    alert(`Tipo 1 - Função Declarada: 3 + 5 = ${somaDeclarada(3, 5)}`);
+
+
+    // Tipo 2: Função Expressão (Function Expression)
+    var somaExpressao = function(a, b) {
+        return a + b;
+    };
+    alert(`Tipo 2 - Função Expressão: 10 + 7 = ${somaExpressao(10, 7)}`);
+
+
+    // Tipo 3: Arrow Function (Função de Seta)
+    var somaArrow = (a, b) => a + b;
+    alert(`Tipo 3 - Arrow Function: 4 + 6 = ${somaArrow(4, 6)}`);
+
+
+    // Tipo 4: Função Anônima (chamada imediatamente - IIFE)
+    var resultadoIIFE = (function(a, b) {
+        return a + b;
+    })(8, 2);
+    alert(`Tipo 4 - IIFE (Função Anônima Imediata): 8 + 2 = ${resultadoIIFE}`);
+
+
+    // Tipo 5: Método dentro de um Objeto
+    var calculadora = {
+        soma: function(a, b) {
+            return a + b;
+        }
+    };
+    alert(`Tipo 5 - Método de Objeto: 15 + 5 = ${calculadora.soma(15, 5)}`);
+
+
+    // Tipo 6: Função com parâmetros default
+    function somaComDefault(a = 0, b = 0) {
+        return a + b;
+    }
+    alert(`Tipo 6 - Parâmetros Default (sem argumentos): ${somaComDefault()}`);
+    alert(`Tipo 6 - Parâmetros Default (com argumentos): ${somaComDefault(9, 3)}`);
+</script>
+</html>

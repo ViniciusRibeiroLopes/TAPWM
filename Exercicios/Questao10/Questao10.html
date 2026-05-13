@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 10</title>
+</head>
+<body>
+    <h1>Questão 10</h1>
+</body>
+
+<script>
+    function Aluno2() {
+        var ra; //variável privada (encapsulamento)
+        var nome; //variável privada (encapsulamento)
+        this.setRa = function(value) { //método público (encapsulamento)
+            ra = value;
+        }
+        this.setNome = function(value) { //método público (encapsulamento)
+            nome = value;
+        }
+        this.getRa = function() { //método público (encapsulamento)
+            return ra;
+        }
+        this.getNome = function() { //método público (encapsulamento)
+            return nome;
+        }
+    }
+
+    alert(`Aluno 5`);
+    var aluno5 = new Aluno2();
+    aluno5.setRa('1234567890');
+    aluno5.setNome('Pedro');
+    alert(`O aluno ${aluno5.getNome()} tem o RA ${aluno5.getRa()}`);
+    
+</script>
+</html>

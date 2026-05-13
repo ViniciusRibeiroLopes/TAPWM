@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Medico{
+            constructor(nome, crm){
+                this.nome = nome;
+                this.crm = crm;
+            }
+        }
+        class Pediatra extends Medico{
+            constructor(nome, crm, idadeMaxPaciente){
+                super(nome, crm);
+                this.idadeMaxPaciente = idadeMaxPaciente;
+            }
+        }
+        class Geriatra extends Medico{
+            constructor(nome, crm, idadeMinimaPaciente){
+                super(nome, crm);
+                this.idadeMinimaPaciente = idadeMinimaPaciente;
+            } 
+        }
+
+        var objPediatra = new Pediatra('Camila', '1234567890', '13');
+        var objGeriatra = new Geriatra('Enzo', '1234567890', '70');
+
+        console.log(objPediatra);
+        console.log(objGeriatra);
+        
+    </script>
+</body>
+</html>

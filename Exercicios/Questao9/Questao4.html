@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4 - Array em Ordem Decrescente</title>
+</head>
+<body>
+    <h1>Questão 4 - Array de Números em Ordem Decrescente</h1>
+</body>
+
+<script>
+    function ordenarArrayDecrescente(numeros) {
+        var copia = numeros.slice(); // cria cópia para não alterar o original
+        copia.sort(function(a, b) { return b - a; });
+        return copia;
+    }
+
+    var array1 = [38, 5, 72, 1, 44, 19, 60];
+    var resultado1 = ordenarArrayDecrescente(array1);
+    alert(`Array original: [${array1.join(', ')}]\nOrdem decrescente: [${resultado1.join(', ')}]`);
+
+    var entrada = prompt('Digite números separados por vírgula (ex: 10, 3, 50, 7):');
+    if (entrada !== null) {
+        var array2 = entrada.split(',').map(function(x) { return parseFloat(x.trim()); });
+        var resultado2 = ordenarArrayDecrescente(array2);
+        alert(`Array original: [${array2.join(', ')}]\nOrdem decrescente: [${resultado2.join(', ')}]`);
+    }
+</script>
+</html>

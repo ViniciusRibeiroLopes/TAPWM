@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2 - Contar Letras A</title>
+</head>
+<body>
+    <h1>Questão 2 - Contar Letras 'A' em uma Frase</h1>
+</body>
+
+<script>
+    function contarLetrasA(frase) {
+        var contador = 0;
+        for (var i = 0; i < frase.length; i++) {
+            if (frase[i].toLowerCase() === 'a') {
+                contador++;
+            }
+        }
+        return contador;
+    }
+
+    var frase1 = 'Analise Avancada de Algoritmos';
+    var resultado1 = contarLetrasA(frase1);
+    alert(`Frase: "${frase1}"\nQuantidade de letras 'A' (maiúsculas ou minúsculas): ${resultado1}`);
+
+    var frase2 = prompt('Digite uma frase para contar as letras A:');
+    if (frase2 !== null) {
+        var resultado2 = contarLetrasA(frase2);
+        alert(`Frase: "${frase2}"\nQuantidade de letras 'A' (maiúsculas ou minúsculas): ${resultado2}`);
+    }
+</script>
+</html>
