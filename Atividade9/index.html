@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 6h18"></path>
+                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                    <line x1="12" y1="11" x2="12" y2="17"></line>
+                    <line x1="9" y1="14" x2="15" y2="14"></line>
+                </svg>
+            </div>
+            <h1>Calculadora de IMC</h1>
+            <p>Descubra seu Índice de Massa Corporal e veja como está sua saúde</p>
+        </header>
+
+        <div class="calculator-grid">
+            <div class="card input-section">
+                <h2>Insira seus dados</h2>
+                
+                <div class="input-group">
+                    <label for="peso">Peso (kg)</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="peso" placeholder="Ex: 70.5" step="0.1" min="1">
+                        <span class="unit">kg</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="altura">Altura (cm)</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="altura" placeholder="Ex: 175" min="1">
+                        <span class="unit">cm</span>
+                    </div>
+                </div>
+
+                <button id="calcular-btn">
+                    <span>Calcular IMC</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="card result-section" id="result-card">
+                <h2>Seu Resultado</h2>
+                
+                <div class="result-display empty" id="result-display">
+                    <div class="empty-state">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                        <p>Preencha seus dados para ver o resultado</p>
+                    </div>
+
+                    <div class="result-content">
+                        <div class="imc-value-wrapper">
+                            <span class="imc-label">IMC</span>
+                            <span class="imc-value" id="imc-value">0.0</span>
+                        </div>
+                        <div class="imc-classification" id="imc-classification">
+                            Classificação
+                        </div>
+                        
+                        <div class="imc-bar-container">
+                            <div class="imc-bar">
+                                <div class="segment segment-underweight"></div>
+                                <div class="segment segment-normal"></div>
+                                <div class="segment segment-overweight"></div>
+                                <div class="segment segment-obese"></div>
+                            </div>
+                            <div class="imc-marker" id="imc-marker"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card info-section">
+            <h2>Tabela de Referência da OMS</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Classificação</th>
+                            <th>IMC (kg/m²)</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="row-underweight">
+                            <td>Abaixo do peso</td>
+                            <td>Menor que 18.5</td>
+                            <td>Atenção</td>
+                        </tr>
+                        <tr class="row-normal">
+                            <td>Peso normal</td>
+                            <td>18.5 a 24.9</td>
+                            <td>Ideal</td>
+                        </tr>
+                        <tr class="row-overweight">
+                            <td>Sobrepeso</td>
+                            <td>25.0 a 29.9</td>
+                            <td>Cuidado</td>
+                        </tr>
+                        <tr class="row-obese">
+                            <td>Obesidade</td>
+                            <td>Maior ou igual a 30</td>
+                            <td>Risco</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
