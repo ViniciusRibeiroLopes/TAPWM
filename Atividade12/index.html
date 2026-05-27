@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abra a Janela</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="titulo">Janela Fechada</h1>
+    <img id="janela" src="janelas.png" alt="Janela">
+
+    <script>
+        const janela = document.getElementById('janela');
+        const titulo = document.getElementById('titulo');
+        let quebrada = false;
+
+        janela.addEventListener('mouseover', () => {
+            if (!quebrada) {
+                janela.src = 'janela-aberta.png';
+                titulo.textContent = 'Janela aberta';
+            }
+        });
+
+        janela.addEventListener('mouseout', () => {
+            if (!quebrada) {
+                janela.src = 'janelas.png';
+                titulo.textContent = 'Janela Fechada';
+            }
+        });
+
+        janela.addEventListener('click', () => {
+            quebrada = true;
+            janela.src = 'janela-quebrada.png';
+            titulo.textContent = 'Janela Quebrada';
+            janela.style.cursor = 'default';
+        });
+    </script>
+</body>
+
+</html>
