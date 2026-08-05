@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 15 - Cursos Fatec Sorocaba</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #042d3f;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .card {
+            background-color: #0a3d54;
+            width: 100%;
+            max-width: 480px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+            border: 1px solid #134e6b;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #d0e6f2;
+        }
+        select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #1a5b7a;
+            border-radius: 8px;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            font-size: 14px;
+            outline: none;
+            cursor: pointer;
+        }
+        select:focus {
+            border-color: #0099dd;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>Cursos Fatec Sorocaba</h2>
+        <label for="cursoSelect">Selecione um curso:</label>
+        <select id="cursoSelect" onchange="abrirCurso(this)">
+            <option value="">-- Escolha um curso --</option>
+            <option value="ads">Análise e Desenvolvimento de Sistemas</option>
+            <option value="automacao">Automação Industrial</option>
+            <option value="ds_ams">Desenvolvimento de Sistemas – AMS</option>
+            <option value="eletronica">Eletrônica Automotiva</option>
+            <option value="fabmeca">Fabricação Mecânica</option>
+            <option value="qualidade">Gestão da Qualidade</option>
+            <option value="ge_ead">Gestão Empresarial – EAD</option>
+            <option value="logistica">Logística</option>
+            <option value="logistica_ams">Logística – AMS</option>
+            <option value="manufatura">Manufatura Avançada</option>
+            <option value="aeronaves">Manutenção de Aeronaves</option>
+            <option value="polimeros">Polímeros</option>
+            <option value="metalurgicos">Processos Metalúrgicos</option>
+            <option value="projmeca">Projetos Mecânicos</option>
+            <option value="biomedicos">Sistemas Biomédicos</option>
+        </select>
+    </div>
+
+    <script>
+        var descricoes = {
+            "ads": "Capacita o aluno a analisar, projetar, documentar, especificar, testar, implementar e manter sistemas computacionais de informação.",
+            "automacao": "Prepara profissionais para projetar, instalar, otimizar e manter sistemas automatizados e robóticos nos processos industriais.",
+            "ds_ams": "Modalidade de Articulação Médio-Superior que integra o ensino técnico ao superior para a formação de desenvolvedores de software.",
+            "eletronica": "Qualifica o profissional para projetar, diagnosticar e manter sistemas eletrônicos, embarcados e de automação veicular.",
+            "fabmeca": "Forma especialistas no planejamento, gestão e otimização dos processos de usinagem, conformação, soldagem e manufatura mecânica.",
+            "qualidade": "Capacita para a implantação, auditoria e controle de sistemas de gestão da qualidade, otimizando processos organizacionais.",
+            "ge_ead": "Forma profissionais a distância capazes de planejar e gerenciar negócios, atuando nas áreas financeira, mercadológica e de RH.",
+            "logistica": "Habilita o profissional para planejar e coordenar operações de suprimento, armazenamento, transporte e distribuição.",
+            "logistica_ams": "Formação integrada entre ensino técnico e superior focada na gestão eficiente da cadeia de suprimentos e logística.",
+            "manufatura": "Prepara profissionais para atuar na Indústria 4.0, integrando sistemas digitais, IoT, robótica e automação de produção.",
+            "aeronaves": "Qualifica o especialista na gestão, inspeção, diagnóstico e manutenção de sistemas mecânicos, aviônicos e de aeronaves.",
+            "polimeros": "Prepara profissionais para atuar no processamento, desenvolvimento e controle de qualidade de materiais plásticos e borrachas.",
+            "metalurgicos": "Forma especialistas no desenvolvimento, tratamento térmico, fundição e caracterização de materiais metálicos e ligas.",
+            "projmeca": "Capacita o profissional no desenvolvimento de máquinas, equipamentos e produtos mecânicos utilizando ferramentas CAD/CAE.",
+            "biomedicos": "Forma profissionais para gerenciar, aplicar e manter equipamentos médico-hospitalares, promovendo inovação na saúde."
+        };
+
+        function abrirCurso(select) {
+            var valor = select.value;
+            if (!valor) return;
+
+            var nomeCurso = select.options[select.selectedIndex].text;
+
+            var confirmou = confirm("Deseja realmente abrir as informações sobre o curso: " + nomeCurso + "?");
+
+            if (confirmou) {
+                var info = descricoes[valor] || "Curso oferecido pela Fatec Sorocaba para formação tecnológica de excelência.";
+
+                var novaJanela = window.open("", "_blank", "width=600,height=300");
+                if (novaJanela) {
+                    novaJanela.document.write(`
+                        <!DOCTYPE html>
+                        <html lang="pt-BR">
+                        <head>
+                            <meta charset="UTF-8">
+                            <title>${nomeCurso}</title>
+                            <style>
+                                body {
+                                    font-family: Arial, sans-serif;
+                                    padding: 20px;
+                                    background-color: #f4f4f9;
+                                    color: #333;
+                                    line-height: 1.6;
+                                }
+                                h2 {
+                                    color: #0a3d54;
+                                    border-bottom: 2px solid #0099dd;
+                                    padding-bottom: 8px;
+                                    margin-bottom: 15px;
+                                }
+                                p {
+                                    font-size: 15px;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <h2>${nomeCurso}</h2>
+                            <p>${info}</p>
+                        </body>
+                        </html>
+                    `);
+                    novaJanela.document.close();
+                }
+            }
+
+            select.value = "";
+        }
+    </script>
+</body>
+</html>
