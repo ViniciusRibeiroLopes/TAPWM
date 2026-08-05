@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 14</title>
+    <style>
+        body {
+            background-color: #0099dd;
+            font-family: sans-serif;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            width: 320px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            margin: 5px 0 15px 0;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 80px;
+        }
+
+        .pesquisa {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .botoes {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form name="nomeform" onsubmit="return validar()">
+        <h2>Formulário Principal</h2>
+
+        <label>Nome:</label>
+        <input type="text" name="nome">
+
+        <label>E-mail:</label>
+        <input type="email" name="email">
+
+        <label>Comentário:</label>
+        <textarea name="comentario"></textarea>
+
+        <div class="pesquisa">
+            <p>Pesquisa:</p>
+            <p><i>Primeira vez nesta página??</i></p>
+            <input type="radio" name="pesquisa" value="Sim"> Sim
+            <input type="radio" name="pesquisa" value="Não"> Não
+        </div>
+
+        <div class="botoes">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+
+    <script>
+        function validar() {
+            var f = document.nomeform;
+
+            if (f.elements["nome"].value.length < 10) {
+                alert("Nome não pode ter menos que 10 caracteres.");
+                return false;
+            }
+
+            if (f.elements["email"].value === "" || f.elements["email"].value.indexOf("@") === -1 || f.elements["email"].value.indexOf(".") === -1) {
+                alert("Email inválido.");
+                return false;
+            }
+
+            if (f.elements["comentario"].value.length < 20) {
+                alert("Comentário deve ter no mínimo 20 caracteres.");
+                return false;
+            }
+
+            if (!f.elements["pesquisa"][0].checked && !f.elements["pesquisa"][1].checked) {
+                alert("Pesquisa é obrigatória.");
+                return false;
+            }
+
+            if (f.elements["pesquisa"][1].checked) {
+                alert("Que bom que você voltou a visitar esta página!");
+            } else {
+                alert("Volte sempre à está página!");
+            }
+
+            return true;
+        }
+    </script>
+</body>
+
+</html>
