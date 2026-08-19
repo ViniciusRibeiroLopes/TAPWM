@@ -1,19 +1,24 @@
 # 📚 Técnicas Avançadas de Programação Web e Mobile
 
-Repositório destinado às atividades e projetos da disciplina de **Técnicas Avançadas de Programação Web e Mobile** da **Fatec-AMS**.
+Repositório destinado às atividades, exercícios práticos e projetos da disciplina de **Técnicas Avançadas de Programação Web e Mobile** da **Fatec Sorocaba (Fatec-AMS)**.
 
 ---
 
 ## 🎯 Objetivo
-O repositório armazena exemplos práticos, exercícios e projetos desenvolvidos ao longo do curso, focando em conceitos teóricos e aplicações práticas de desenvolvimento de software.
+
+O repositório centraliza e documenta a evolução dos conceitos teóricos e aplicações práticas abordadas na disciplina, abrangendo desde paradigmas de Programação Orientada a Objetos e desenvolvimento Desktop até aplicações Web modernas com JavaScript vanilla, manipulação avançada de DOM e desenvolvimento assíncrono em Node.js.
+
+---
 
 ## 🗂 Estrutura do Repositório
 
 ### 1️⃣ Aula 1 - Orientação a Objetos (Teoria)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 - **Pasta:** `/Aula1_POO`
-- **Descrição:** Revisão e aplicação de conceitos teóricos fundamentais de Programação Orientada a Objetos.
+- **Descrição:** Revisão e aplicação de conceitos teóricos fundamentais de Programação Orientada a Objetos (classes, atributos, métodos, construtores e encapsulamento).
 - **Tecnologia:** Java
+
+---
 
 ### 2️⃣ Atividade 2 - Windows Forms
 ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white) ![.NET](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
@@ -21,66 +26,209 @@ O repositório armazena exemplos práticos, exercícios e projetos desenvolvidos
 - **Descrição:** Desenvolvimento prático de uma aplicação desktop utilizando a interface gráfica do Windows Forms.
 - **Tecnologia:** C# / .NET
 
+---
+
 ### 3️⃣ Atividade 3 - Cálculo de Média e Operações
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
 - **Pasta:** `/Atividade3`
-- **Descrição:** Scripts simples em JavaScript voltados à realização de operações matemáticas básicas e cálculo de médias.
+- **Descrição:** Scripts em JavaScript voltados à realização de operações matemáticas básicas, leitura de notas e cálculo de médias aritméticas.
 - **Tecnologias:** HTML, JavaScript Vanilla
+
+---
 
 ### 4️⃣ Atividade 4 - Pedra, Papel, Tesoura
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
 - **Pasta:** `/Atividade4`
-- **Descrição:** Um jogo interativo de Pedra, Papel e Tesoura contra o computador, acompanhando o placar de vitórias, derrotas e empates em uma interface amigável.
+- **Descrição:** Um jogo interativo de Pedra, Papel e Tesoura (Jokenpô) contra o computador, com acompanhamento de placar em tempo real e interface responsiva.
 - **Tecnologias:** HTML, CSS, JavaScript
+
+---
 
 ### 5️⃣ Atividade 5 - Pesquisa de Opinião
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
 - **Pasta:** `/Atividade5`
-- **Descrição:** Aplicação web responsiva estilo *minimalista* que recebe respostas sobre a opinião de um filme e realiza tabulação lógica exibindo as estatísticas geradas no fechamento dos dados em tempo real. Possui suporte a modos Claro/Escuro.
-- **Tecnologias:** HTML, CSS Vanilla e ES6
+- **Descrição:** Aplicação web responsiva que recebe avaliações sobre um filme e realiza a tabulação estatística dos dados em tempo real, com suporte a temas Claro e Escuro.
+- **Tecnologias:** HTML, CSS Vanilla e JavaScript ES6
+
+---
 
 ### 6️⃣ Atividade 6 - Verificador de Triângulos
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
 - **Pasta:** `/Atividade6`
-- **Descrição:** Aplicação que recebe três medidas de um usuário e verifica se elas podem formar um triângulo, além de classificar o seu tipo (Equilátero, Isósceles ou Escaleno).
+- **Descrição:** Aplicação que recebe três medidas e verifica a condição de existência de um triângulo, classificando-o em Equilátero, Isósceles ou Escaleno.
 - **Tecnologias:** HTML, CSS, JavaScript
+
+---
 
 ### 7️⃣ Atividade 7 - Toolkit Minimalista
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
 - **Pasta:** `/Atividade7`
-- **Descrição:** Uma coleção de 3 mini-aplicações em uma só página: descobrir o maior número entre três digitados, ordená-los crescentemente e verificar se uma string (palavra ou frase) é um palíndromo.
+- **Descrição:** Coleção de 3 utilitários em página única: identificação do maior número entre três valores, ordenação numérica crescente e verificador de palíndromos.
 - **Tecnologias:** HTML, CSS, JavaScript
+
+---
 
 ### 8️⃣ Atividade 8 - Operações com Arrays
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
 - **Pasta:** `/Atividade8`
-- **Descrição:** Lógica de manipulação de arrays com JavaScript utilizando as funções nativas `apply` e `push`. Faz cálculos de soma e quadrados a partir de arrays numéricos, além de embaralhar elementos textuais para criar um conjunto de anagramas.
+- **Descrição:** Manipulação de arrays em JavaScript utilizando métodos nativos (`apply`, `push`, etc.) para operações matemáticas de soma, cálculo de quadrados e geração de anagramas.
 - **Tecnologias:** HTML, CSS, JavaScript
 
 ---
 
-## 🚀 Como executar os projetos
-
-### Pré-requisitos
-- Para os projetos em **Java**: Possuir o [JDK (Java Development Kit)](https://www.oracle.com/java/technologies/downloads/) instalado e configurado, ou utilizar uma IDE como Eclipse/IntelliJ/VS Code.
-- Para os projetos em **C#**: Possuir o [Visual Studio](https://visualstudio.microsoft.com/) instalado com o pacote ("workload") de *Desenvolvimento para Desktop com .NET*.
-- Para os projetos **Web (Atividades 3 a 8)**: Apenas um navegador de internet (Chrome, Edge, Safari, Firefox).
-
-### Passos
-1. Faça o clone do repositório em sua máquina local:
-   ```bash
-   git clone <URL_DO_REPOSITORIO>
-   ```
-2. **Para a Aula 1 (Java)**:
-   - Abra a pasta `Aula1_POO` em sua IDE de preferência.
-   - Execute o arquivo correspondente à classe principal (`Program.java`).
-3. **Para a Atividade 2 (C#)**:
-   - Navegue até a pasta `Atividade2/WindowsFormsApp1`.
-   - Abra o arquivo da solução (ou o projeto diretamente) no Visual Studio e clique em *Iniciar* (ou pressione `F5`).
-4. **Para os Projetos Web (Atividades 3, 4, 5, 6, 7 e 8)**:
-   - Estando na raiz do repositório, navegue para a pasta da atividade desejada.
-   - Basta abrir o arquivo `.html` respectivo (como o `index.html`) em seu navegador para rodar a aplicação imediatamente.
+### 9️⃣ Atividade 9 - Calculadora de IMC
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
+- **Pasta:** `/Atividade9`
+- **Descrição:** Aplicação completa e responsiva para cálculo do Índice de Massa Corporal (IMC), com classificação segundo a OMS, cálculo de peso ideal e interface visual moderna.
+- **Tecnologias:** HTML5, CSS3 avançado, JavaScript ES6
 
 ---
 
-✒️ *Desenvolvido para fins acadêmicos - Fatec-AMS*
+### 🔟 Atividade 10 - Formas de Criação de Objetos
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
+- **Pasta:** `/Atividade10`
+- **Descrição:** Demonstração prática das diferentes formas de criar e manipular objetos em JavaScript: construtor `Object`, objetos literais `{}`, funções construtoras, encapsulamento com closures e variáveis privadas, e classes ES6.
+- **Tecnologias:** HTML, JavaScript Vanilla
+
+---
+
+### 1️⃣1️⃣ Atividade 11 - POO em JavaScript: Funções Construtoras e Herança
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
+- **Pasta:** `/Atividade11`
+- **Descrição:** Implementação de Orientação a Objetos no JS: cálculo da área de um Retângulo através de função construtora e simulação de Sistema Bancário com classe base `Conta` e subclasses com herança (`ContaCorrente` com saldo especial e `ContaPoupanca` com juros e vencimento).
+- **Tecnologias:** HTML, CSS, JavaScript ES6 (Classes, `extends`, `super`, getters e setters)
+
+---
+
+### 1️⃣2️⃣ Atividade 12 - Eventos do DOM (Janela Interativa)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
+- **Pasta:** `/Atividade12`
+- **Descrição:** Manipulação dinâmica do DOM através de eventos de mouse (`mouseover`, `mouseout`, `click`) para alterar o estado visual e textual da janela (fechada, aberta e quebrada).
+- **Tecnologias:** HTML, CSS, JavaScript (DOM Events)
+
+---
+
+### 1️⃣3️⃣ Atividade 13 - Conversor de Texto Dinâmico
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
+- **Pasta:** `/Atividade13`
+- **Descrição:** Interface interativa que converte texto em tempo real para letras Maiúsculas ou Minúsculas baseado na seleção de *Radio Buttons* e no evento `input`.
+- **Tecnologias:** HTML, CSS, JavaScript (Eventos `change` e `input`)
+
+---
+
+### 1️⃣4️⃣ Atividade 14 - Validação de Formulários
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
+- **Pasta:** `/Atividade14`
+- **Descrição:** Validação completa de formulário no lado do cliente: verificação de tamanho mínimo de campos (nome e comentários), validação de formato de e-mail (`@` e `.`), campos de rádio obrigatórios e mensagens personalizadas.
+- **Tecnologias:** HTML, CSS, JavaScript (Validação de Formulários)
+
+---
+
+### 1️⃣5️⃣ Atividade 15 - Catálogo de Cursos Fatec
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
+- **Pasta:** `/Atividade15`
+- **Descrição:** Menu suspenso (`<select>`) com os cursos oferecidos pela Fatec Sorocaba. Ao selecionar um curso, o usuário confirma via `confirm()` e uma nova janela é instanciada e configurada dinamicamente via `window.open()`.
+- **Tecnologias:** HTML, CSS, JavaScript (`window.open`, `confirm`, dicionário de dados)
+
+---
+
+### 1️⃣6️⃣ Atividade 16 - Introdução ao Node.js e I/O
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
+- **Pasta:** `/Atividade16`
+- **Descrição:** Primeiros passos no ambiente Node.js: entrada de dados via teclado com `prompt-sync`, recepção de argumentos de linha de comando (`process.argv`), controle de fluxo síncrono vs `setTimeout`, leitura síncrona de arquivos (`fs.readFileSync`) e conceitos de funções callback.
+- **Tecnologia:** Node.js, Módulo `fs`, `prompt-sync`
+
+---
+
+### 1️⃣7️⃣ Atividade 17 - Assincronismo: Callbacks e Promises
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
+- **Pasta:** `/Atividade17`
+- **Descrição:** Aprofundamento no paradigma assíncrono do Node.js: execução ordenada de callbacks, leitura assíncrona de arquivos com o método tradicional (`fs.readFile`) e com Promises (`fs.promises.readFile`), utilizando encadeamento `.then()` e tratamento de erros com `.catch()`.
+- **Tecnologia:** Node.js, `fs.promises`, Promises & Callbacks
+
+---
+
+### ⭐ Atividade Extra - Formas de Criação de Objetos
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
+- **Pasta:** `/AtividadeExtra`
+- **Descrição:** Implementação de 5 abordagens distintas para instanciação de objetos com propriedades (`nome`, `idade`, `hobby`) e método `apresentar()`: Objeto Literal, `new Object()`, Função Construtora, Classe ES6 e `Object.create()`.
+- **Tecnologias:** HTML, JavaScript Vanilla
+
+---
+
+### 📝 Exercícios de Fixação
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
+- **Pasta:** `/Exercicios`
+- **Descrição:** Resolução de questões da lista de estudo preparatória:
+  - **Questao9:** Tipos de declaração de funções (Declaration, Expression, Arrow, IIFE, Métodos, Default Parameters), contagem de caracteres em strings e ordenação de números.
+  - **Questao10:** Encapsulamento com variáveis privadas e métodos assessores (getters e setters).
+  - **Questao21:** Instanciação e atribuição dinâmica de objetos com `new Object()`.
+  - **Questao23:** Herança entre classes em JavaScript (`Medico`, `Pediatra`, `Geriatra`).
+- **Tecnologias:** HTML, JavaScript ES6
+
+---
+
+## 🚀 Como Executar os Projetos
+
+### Pré-requisitos
+- **Java (Aula 1)**: Ter o [JDK (Java Development Kit)](https://www.oracle.com/java/technologies/downloads/) instalado e configurado, ou utilizar uma IDE como Eclipse, IntelliJ IDEA ou VS Code.
+- **C# / .NET (Atividade 2)**: Ter o [Visual Studio](https://visualstudio.microsoft.com/) instalado com a carga de trabalho de *Desenvolvimento para Desktop com .NET*.
+- **Projetos Web (Atividades 3 a 15, Atividade Extra e Exercícios)**: Um navegador moderno (Chrome, Edge, Firefox, etc.).
+- **Node.js (Atividades 16 e 17)**: Ter o [Node.js](https://nodejs.org/) instalado na máquina.
+
+---
+
+### Instruções de Execução
+
+#### ☕ Projetos Java (Aula 1)
+```bash
+cd Aula1_POO
+javac Program.java
+java Program
+```
+*(Ou execute diretamente pela sua IDE de preferência).*
+
+#### 🖥️ Projetos C# (Atividade 2)
+1. Navegue até a pasta `Atividade2/WindowsFormsApp1`.
+2. Abra o arquivo de solução `.sln` no Visual Studio.
+3. Pressione `F5` ou clique em **Iniciar** para rodar a aplicação.
+
+#### 🌐 Projetos Web (Atividades 3 a 15, Atividade Extra e Exercícios)
+1. Navegue até a pasta da atividade desejada (ex: `/Atividade9`).
+2. Dê um duplo clique no arquivo `.html` (ex: `index.html` ou `Atividade10.html`) para abri-lo diretamente no navegador, ou utilize a extensão **Live Server** no VS Code.
+
+#### 🟢 Projetos Node.js (Atividades 16 e 17)
+
+**Atividade 16:**
+```bash
+cd Atividade16
+npm install
+node exercicio1.js
+node callback1.js
+node exercicio3.js 10 20 30
+node exercicio4S.js
+```
+
+**Atividade 17:**
+```bash
+cd Atividade17
+node callback2.js
+node exercicio4A.js
+node exercicio4Apromises.js
+```
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+| Tecnologia | Descrição |
+| :--- | :--- |
+| **Java** | Programação Orientada a Objetos clássica |
+| **C# / .NET** | Aplicação Desktop com interface gráfica (Windows Forms) |
+| **HTML5 & CSS3** | Estruturação semântica e estilização visual moderna e responsiva |
+| **JavaScript (ES6+)** | Lógica de programação, manipulação de DOM, objetos, classes e herança |
+| **Node.js** | Execução JavaScript no servidor, manipulação de arquivos (I/O) e programação assíncrona (Callbacks e Promises) |
+
+---
+
+✒️ *Desenvolvido para fins acadêmicos — Fatec Sorocaba (Fatec-AMS)*
