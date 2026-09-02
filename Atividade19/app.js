@@ -1,30 +1,19 @@
 let app = require('../Exercicios/app/config/server');
-let texto = require('./modulo1');
 
-app.get('/', function (req, res) {
-    res.render('home/index', { texto });
-});
+let rotaHome = require('../Exercicios/app/routes/home');
+rotaHome(app);
 
-app.get('/historia', function (req, res) {
-    res.render('informacao/historia');
-});
+let rotaHistoria = require('../Exercicios/app/routes/historia');
+rotaHistoria(app);
 
-app.get('/cursos', function (req, res) {
-    res.render('informacao/cursos');
-});
+let rotaCursos = require('../Exercicios/app/routes/cursos');
+rotaCursos(app);
 
-app.get('/professores', function (req, res) {
-    res.render('informacao/professores');
-});
+let rotaProfessores = require('../Exercicios/app/routes/professores');
+rotaProfessores(app);
 
-app.get('/admin/adicionar_usuario', function (req, res) {
-    res.render('admin/adicionar_usuario');
-});
-
-app.post('/admin/adicionar_usuario', function (req, res) {
-    console.log(req.body);
-    res.render('admin/adicionar_usuario');
-});
+let rotaAdicionarUsuario = require('../Exercicios/app/routes/adicionar_usuario');
+rotaAdicionarUsuario(app);
 
 app.listen(3000, function () {
     console.log('Servidor rodando na porta 3000');
