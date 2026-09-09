@@ -1,0 +1,40 @@
+// res.send(): envia os dados diretamente ao navegador sem processar template engine
+// res.render(): compila o arquivo de view EJS e retorna o HTML renderizado
+module.exports = function (app) {
+    app.get('/novidades', function (req, res) {
+        res.send(`<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novidades - Semana de Tecnologia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="/">Semana de Tecnologia</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/sobre">Sobre</a>
+                <a class="nav-link" href="/programacao">Programação</a>
+                <a class="nav-link" href="/contato">Contato</a>
+                <a class="nav-link" href="/admin/inscricao">Inscrição</a>
+                <a class="nav-link active" href="/novidades">Novidades</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Novidades do Evento</h2>
+        <hr>
+        <p>Esta rota utiliza <code>res.send()</code> para enviar conteúdo HTML diretamente ao navegador.</p>
+        <div class="alert alert-info">
+            Inscrições para workshops abertas a partir do dia 15!
+        </div>
+        <a href="/" class="btn btn-outline-secondary btn-sm">Voltar para a Home</a>
+    </div>
+</body>
+</html>`);
+    });
+};
