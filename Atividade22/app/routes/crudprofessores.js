@@ -1,14 +1,12 @@
 module.exports = function (app) {
-    app.get('/informacao/professores', function (req, res) {
+    app.get('/admin/crud_professores', function (req, res) {
         async function getProf() {
             try {
                 let connection = app.config.dbConnection;
                 const pool = await connection();
-                let professoresModel = app.models.professormodel;// variável que recupera a função exporta
-                //executar a função
-                // tem passar a conexao e o callback
+                let professoresModel = app.models.professormodel;
                 professoresModel.getProfessores(pool, function (error, results) {
-                    res.render('informacao/professores', { profs: results.recordset });
+                    res.render('admin/crud_professores', { profs: results.recordset });
                 });
             } catch (err) {
                 console.log(err)

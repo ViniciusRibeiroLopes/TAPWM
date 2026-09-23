@@ -1,10 +1,14 @@
 let express = require('express');
 let consign = require('consign');
+let bodyParser = require('body-parser');
 let app = express();
 app.set('view engine', 'ejs');
 app.set('views', './app/views');
-//o consign procura por todos os arquivos js dentro do
-// diretório app/routes e, para cada um deles, execute o código contido,
-//passando a instância do seu aplicativo Express (app) como um argumento.
-consign().include('app/routes').into(app);
+// para ele entender o formato da URL
+app.use(bodyParser.urlencoded({ extended: true }));
+consign({ cwd: 'app' }) // para incluir a pasta app
+    .include('routes')
+    .then('config/dbConnection.js')
+    .then('models')
+    .into(app);
 module.exports = app;
