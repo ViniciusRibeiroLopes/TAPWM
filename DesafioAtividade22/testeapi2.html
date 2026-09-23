@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Adicionar Tarefa</title>
+</head>
+<body>
+    <h1>Adicionar Tarefa</h1>
+    <form id="tarefa-form">
+        <label for="tarefa">Tarefa:</label>
+        <input type="text" id="tarefa" name="tarefa" placeholder="Digite uma tarefa" required>
+        <button type="submit">Adicionar</button>
+    </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('tarefa-form');
+            const endpoint = 'http://localhost:3000/tarefas';
+
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                const tarefaInput = document.getElementById('tarefa');
+                const enviaTarefa = tarefaInput.value;
+
+                try {
+                    const response = await fetch(endpoint, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ tarefa: enviaTarefa }),
+                    });
+
+                    if (response.ok) {
+                        alert('Tarefa adicionada com sucesso!');
+                        tarefaInput.value = '';
+                    } else {
+                        alert('Erro ao adicionar a tarefa.');
+                    }
+                } catch (error) {
+                    console.error('Erro na requisição:', error);
+                    alert('Erro ao adicionar a tarefa. Verifique a conexão ou o servidor.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
